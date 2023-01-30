@@ -1,5 +1,12 @@
 import React, { useState } from "react";
-import { Icone, Box, Detalhe, Saldo, Botao } from "../../Components/UI";
+import {
+  Icone,
+  Box,
+  Detalhe,
+  Saldo,
+  Botao,
+  IconeTema,
+} from "../../Components/UI";
 
 import styled from "styled-components";
 import privado from "../../assets/images/privado.svg";
@@ -8,7 +15,7 @@ import dinheiro from "../../assets/images/dinheiro.svg";
 
 const IconeMargin = styled(Icone)`
   margin-top: 2px;
-`
+`;
 
 const Conta = () => {
   const [toggleState, untoggle] = useState(true);
@@ -23,7 +30,7 @@ const Conta = () => {
       <div style={{ fontSize: "26px", padding: "20px 0" }}>
         Saldo disponível{" "}
         <span>
-          <Icone src={dinheiro} alt="Ícone Saldo" />
+          <IconeTema src={dinheiro} alt="Ícone Saldo" />
         </span>
         {toggleState ? (
           <Saldo>
